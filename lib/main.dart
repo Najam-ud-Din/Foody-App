@@ -1,3 +1,5 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/constants/constants.dart';
@@ -5,7 +7,8 @@ import 'package:foody/views/entrypoint.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      DevicePreview(enabled: !kReleaseMode, builder: ((context) => MyApp())));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,6 +24,9 @@ class MyApp extends StatelessWidget {
         // Use builder only if you need to use library outside ScreenUtilInit context
         builder: (centext, child) {
           return GetMaterialApp(
+            useInheritedMediaQuery: true,
+            locale: DevicePreview.locale(context),
+            builder: DevicePreview.appBuilder,
             debugShowCheckedModeBanner: false,
             title: 'First Method',
             // You can use the library anywhere in the app even in theme

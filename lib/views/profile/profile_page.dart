@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:foody/commons/custom_appbar.dart';
 import 'package:foody/commons/custom_container.dart';
 import 'package:foody/constants/constants.dart';
 
@@ -12,9 +13,7 @@ class profilepage extends StatelessWidget {
         backgroundColor: kPrimary,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(130.h),
-          child: Container(
-            height: 110,
-          ),
+          child: CustomAppbar(),
         ),
         body: SafeArea(
             child: Customcontainer(

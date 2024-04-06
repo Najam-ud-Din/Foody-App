@@ -13,8 +13,8 @@ class Customcontainer extends StatelessWidget {
       width: width,
       child: ClipRRect(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(10.r),
-          topRight: Radius.circular(10.r),
+          //topLeft: Radius.circular(10.r),
+          //topRight: Radius.circular(10.r),
           bottomLeft: Radius.circular(30.r),
           bottomRight: Radius.circular(30.r),
         ),
