@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/constants/constants.dart';
+import 'package:foody/commons/Applayout.dart';
 
 class Customcontainer extends StatelessWidget {
   final Widget Containercontent;
@@ -10,7 +11,7 @@ class Customcontainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.75,
-      width: width,
+      width: Applayout.getscreenWidth(),
       child: ClipRRect(
         borderRadius: BorderRadius.only(
           //topLeft: Radius.circular(10.r),
@@ -19,7 +20,7 @@ class Customcontainer extends StatelessWidget {
           bottomRight: Radius.circular(30.r),
         ),
         child: Container(
-          width: width,
+          width: Applayout.getscreenWidth(),
           color: kOffWhite,
           child: SingleChildScrollView(
             child: Containercontent,
