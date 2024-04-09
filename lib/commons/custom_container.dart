@@ -14,18 +14,15 @@ class Customcontainer extends StatelessWidget {
       width: Applayout.getscreenWidth(),
       child: ClipRRect(
         borderRadius: BorderRadius.only(
-          //topLeft: Radius.circular(10.r),
-          //topRight: Radius.circular(10.r),
           bottomLeft: Radius.circular(30.r),
           bottomRight: Radius.circular(30.r),
         ),
         child: Container(
-          width: Applayout.getscreenWidth(),
-          color: kOffWhite,
-          child: SingleChildScrollView(
-            child: Containercontent,
-          ),
-        ),
+            width: Applayout.getscreenWidth(),
+            color: kOffWhite,
+            child: SingleChildScrollView(
+              child: Containercontent,
+            )),
       ),
     );
   }
