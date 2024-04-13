@@ -1,9 +1,14 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/commons/custom_appbar.dart';
 import 'package:foody/commons/custom_container.dart';
+import 'package:foody/commons/heading.dart';
 import 'package:foody/constants/constants.dart';
+import 'package:foody/views/home/widgets/allnearbrestaurant.dart';
 import 'package:foody/views/home/widgets/categorylist.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -18,9 +23,9 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.only(top: 35.h),
               color: Colors.white,
               height: 100,
-              child: CustomAppbar()),
+              child: const CustomAppbar()),
         ),
-        body: SafeArea(
+        body: const SafeArea(
             child: Customcontainer(
           Containercontent: Column(
             children: [

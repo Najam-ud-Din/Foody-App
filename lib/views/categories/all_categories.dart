@@ -3,6 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foody/commons/backgroundcontainer.dart';
 import 'package:foody/constants/constants.dart';
 import 'package:foody/constants/uidata.dart';
+import 'package:foody/views/categories/categorypage.dart';
+import 'package:get/get.dart';
+
+import 'widgets/categorytile.dart';
 
 class AllCategories extends StatelessWidget {
   const AllCategories({super.key});
@@ -28,28 +32,7 @@ class AllCategories extends StatelessWidget {
             scrollDirection: Axis.vertical,
             children: List.generate(categories.length, (i) {
               var category = categories[i];
-              return ListTile(
-                leading: CircleAvatar(
-                  radius: 18.r,
-                  backgroundColor: kGrayLight,
-                  child: Image.network(
-                    category['imageUrl'],
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                title: Text(
-                  category['title'],
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.normal,
-                      color: kGray),
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: kGray,
-                  size: 15.r,
-                ),
-              );
+              return categorytile(category: category);
             }),
           ),
         ),
