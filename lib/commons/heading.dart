@@ -4,7 +4,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:foody/constants/constants.dart';
 
 class Heading extends StatelessWidget {
-  final dynamic Function()? ontapped;
+  final void Function()? ontapped;
   final String text;
   Heading({super.key, required this.text, this.ontapped});
 
